@@ -1,0 +1,77 @@
+<form [formGroup]="crearForm" (ngSubmit)="onSubmit()">
+
+  
+    <label for="name">Name:</label>
+    <input type="text" id="name" formControlName="name" required>
+
+    @if (name.invalid && name.touched) {
+
+      <p class = "form-error">Name is required</p>
+
+    }
+  
+    <label for="city">City:</label>
+    <input type="text" id="city" formControlName="city" required>
+
+    @if (city.invalid && city.touched) {
+
+      <p class = "form-error">City is required</p>
+
+    }
+  
+    <label for="state">State:</label>
+    <input type="text" id="state" formControlName="state" required>
+
+    @if (state.invalid && state.touched) {
+
+      <p class = "form-error">State is required</p>
+
+    }
+
+    <!--photo: new FormControl(''),
+      availableUnits: new FormControl(''),
+      wifi: new FormControl(''),
+      laundry: new FormControl(''),-->
+
+    <label for="photo">Photo:</label>
+    <input type="text" id="photo" formControlName="photo" required>
+
+    <label for="availableUnits">Available Units:</label>
+    <input type="number" id="availableUnits" formControlName="availableUnits" required>
+
+    @if (availableUnits.invalid && availableUnits.touched) {
+
+      <p class = "form-error">Available Units are required</p>
+
+    }
+
+    <label for="state">Wifi:</label>
+    <input type="text" id="state" formControlName="state" required>
+
+    @if (wifi.invalid && wifi.touched) {
+
+      <p class = "form-error">Wifi is required</p>
+
+    }
+
+    <label for="laundry">Laundry:</label>
+    <input type="text" id="laundry" formControlName="laundry" required>
+
+    @if (laundry.invalid && laundry.touched) {
+
+      <p class = "form-error">Laundry is required</p>
+
+    }
+
+    <select name="" id="">
+      <option *ngFor="let housing of casas" [value]="housing.id">
+        {{ housing.securitySystem }}
+      </option>
+    </select>
+   
+      
+    <button type="submit">Login</button>
+  </form>
+  
+
+  

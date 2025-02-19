@@ -25,7 +25,11 @@ import { RouterLink } from '@angular/router';
       <a [routerLink]="'/login'">
         <button class="login-button">Login</button>
       </a>
+      <button class = "btn-crear" [routerLink]="['/crear/']">
+        Crear Casa
+      </button>
     </section>
+    
     <section class="results">
       <app-housing-location
         *ngFor="let housingLocation of filteredLocationList"
@@ -41,7 +45,10 @@ export class HomeComponent {
   filteredLocationList: HousingLocation[] = [];
 
   constructor() {
-    this.housingService.getAllHousingLocations().then((housingLocationList: HousingLocation[]) => {
+    this.housingService.getAllHousingLocations().then(
+      (housingLocationList: HousingLocation[]) => 
+        
+        {
       console.log('Housing locations loaded:', housingLocationList); 
       this.housingLocationList = housingLocationList;
       this.filteredLocationList = housingLocationList;

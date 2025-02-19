@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { DetailsComponent } from './details/details.component';
 import { LoginComponent } from './login/login.component';
+import { FormCrearComponent } from './form-crear/form-crear.component';
 
 const routeConfig: Routes = [
   {
@@ -18,7 +19,10 @@ const routeConfig: Routes = [
     path: 'login',
     component: LoginComponent,
     title: 'Login'
-  }
+  },
+
+  {path: 'crear', component: FormCrearComponent,  title: 'Crear casa'}
+
 ];
 
 export default routeConfig;
