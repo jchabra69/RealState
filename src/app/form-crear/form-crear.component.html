@@ -63,8 +63,9 @@
 
     }
 
-    <select name="" id="">
-      <option *ngFor="let housing of casas" [value]="housing.id">
+    <label for="securitySystem">Security System</label>
+    <select name="" id="securitySystem">
+      <option *ngFor="let housing of casas" [value]="housing.id" formControlName = "securitySystem">
         {{ housing.securitySystem }}
       </option>
     </select>

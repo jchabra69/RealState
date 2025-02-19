@@ -45,6 +45,7 @@ export class FormCrearComponent implements OnInit {
       availableUnits: FormControl;
       wifi: FormControl;
       laundry: FormControl;
+      securitySystem: FormControl;
   
     ngOnInit(): void {
          
@@ -69,9 +70,19 @@ export class FormCrearComponent implements OnInit {
     this.availableUnits = new FormControl("", Validators.required);
     this.wifi = new FormControl("", Validators.required);
     this.laundry = new FormControl("", Validators.required);
+    this.securitySystem = new FormControl("");
+
 
     this.crearForm = new FormGroup({
 
+          name: this.name,
+          city: this.city,
+          state: this.state,
+          photo: this.photo,
+          availableUnits: this.availableUnits,
+          wifi: this.wifi,
+          laundry: this.laundry,
+          securitySystem: this.securitySystem
 
     })
 
